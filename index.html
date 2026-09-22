@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANG YAANZ STORE - JB Aman, Terpercaya, dan Legal</title>
+    <meta name="description" content="MANG YAANZ STORE menyediakan layanan jual beli akun digital (game, streaming, sosmed) dengan keamanan transaksi terjamin. Transparan, cepat, dan terpercaya.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --text: #f8fafc;
+            --text-light: #cbd5e1;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --radius: 8px;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-light);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--accent);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 1.5rem;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        
+        .logo-subtext {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            left: 0;
+            bottom: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .burger-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 10rem;
+            padding-bottom: 5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0) 70%);
+            top: 10%;
+            right: 10%;
+            border-radius: 50%;
+        }
+        
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .hero-text {
+            max-width: 600px;
+        }
+        
+        .hero-title {
+            font-size: 3.2rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .hero-img {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--secondary);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .about-features {
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-icon {
+            background-color: var(--accent);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--primary);
+        }
+        
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            background-color: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: var(--secondary);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .ready {
+            background-color: var(--success);
+            color: white;
+        }
+        
+        .sold {
+            background-color: var(--danger);
+            color: white;
+        }
+        
+        .product-image {
+            height: 180px;
+            background-color: #334155;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .product-image i {
+            font-size: 4rem;
+            color: var(--accent-light);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-category {
+            color: var(--accent-light);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+        
+        /* Security Section */
+        .security {
+            background-color: var(--secondary);
+        }
+        
+        .security-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            background-color: var(--primary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Testimonials */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background-color: var(--secondary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 4rem;
+            color: var(--accent);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-family: serif;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        
+        .rating {
+            color: var(--warning);
+            margin-top: 0.3rem;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--secondary);
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-details {
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .contact-form {
+            background-color: var(--primary);
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            background-color: var(--secondary);
+            border: 1px solid #334155;
+            border-radius: var(--radius);
+            color: var(--text);
+            font-family: 'Poppins', sans-serif;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #0a0f1c;
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-about {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-link:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .footer-heading {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid #334155;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            z-index: 999;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 992px) {
+            .hero-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                flex-direction: column;
+                background-color: var(--secondary);
+                width: 100%;
+                height: calc(100vh - 70px);
+                padding: 2rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .burger-menu {
+                display: block;
+            }
+            
+            .hero {
+                padding-top: 8rem;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-crown"></i></div>
+                <div>
+                    <div class="logo-text">MANG YAANZ STORE</div>
+                    <div class="logo-subtext">JB Aman, Terpercaya, dan Legal</div>
+                </div>
+            </div>
+            
+            <div class="burger-menu" id="burgerMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">Tentang Kami</a>
+                <a href="#products" class="nav-link">Produk</a>
+                <a href="#security" class="nav-link">Sistem Keamanan</a>
+                <a href="#testimonials" class="nav-link">Testimoni</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Jual Beli Akun Digital Terpercaya</h1>
+                    <p class="hero-subtitle">MANG YAANZ STORE menyediakan layanan jual beli akun digital (game, streaming, sosmed) dengan proses aman, cepat, dan terpercaya. Transaksi dijamin aman dengan sistem escrow.</p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary">Lihat Produk</a>
+                        <a href="#contact" class="btn btn-secondary">Hubungi Admin</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-img">
+                        <i class="fas fa-shield-alt" style="font-size: 20rem; color: var(--accent);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">Tentang Kami</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="MANG YAANZ STORE">
+                </div>
+                <div class="about-text">
+                    <h3>MANG YAANZ STORE - JB Terpercaya Sejak 2019</h3>
+                    <p>Kami adalah pelaku jual beli akun digital dengan pengalaman lebih dari 4 tahun. Fokus kami adalah memberikan layanan terbaik dengan keamanan dan kejujuran sebagai prioritas utama.</p>
+                    <p>Di MANG YAANZ STORE, kami memahami kekhawatiran pembeli dalam transaksi online. Oleh karena itu, kami telah mengembangkan sistem transaksi yang aman untuk melindungi kedua belah pihak.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <h4>Identitas Jelas</h4>
+                                <p>Owner dikenali dengan jelas sebagai penjual terpercaya dengan track record yang baik.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4>Komitmen Kejujuran</h4>
+                                <p>Transparansi penuh dalam setiap transaksi tanpa ada informasi yang disembunyikan.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h4>Proses Cepat</h4>
+                                <p>Transaksi selesai dalam hitungan menit setelah pembayaran dikonfirmasi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <h2 class="section-title">Akun yang Tersedia</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="game">Game</button>
+                <button class="filter-btn" data-filter="streaming">Streaming</button>
+                <button class="filter-btn" data-filter="sosmed">Sosial Media</button>
+            </div>
+            
+            <div class="product-grid" id="productGrid">
+                <!-- Product cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="section security" id="security">
+        <div class="container">
+            <h2 class="section-title">Sistem Keamanan</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem;">Kami menggunakan sistem keamanan berlapis untuk menjamin keamanan transaksi Anda. Berikut adalah proses transaksi yang kami terapkan:</p>
+            
+            <div class="security-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Pilih Akun</h3>
+                    <p>Pilih akun yang ingin dibeli dan hubungi admin untuk mengecek ketersediaan.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Konfirmasi Pembayaran</h3>
+                    <p>Lakukan pembayaran dan kirim bukti ke admin untuk diverifikasi.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Verifikasi Escrow</h3>
+                    <p>Kami memverifikasi pembayaran dan menyimpan akun di sistem escrow.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Serah Terima Akun</h3>
+                    <p>Setelah verifikasi, detail akun dikirimkan ke pembeli dan transaksi selesai.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 4rem; background-color: var(--primary); padding: 2rem; border-radius: var(--radius);">
+                <h3 style="text-align: center; margin-bottom: 1.5rem;">Aturan & Larangan</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4><i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.5rem;"></i> Yang Diizinkan</h4>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.8rem;">
+                            <li>Ganti email/phone sesuai ketentuan</li>
+                            <li>Ganti password setelah transaksi</li>
+                            <li>Menggunakan akun sesuai tujuan</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-ban" style="color: var(--danger); margin-right: 0.5rem;"></i> Yang Dilarang</h4>
+                        <ul style="padding-left: 1.5rem; margin-top: 0.8rem;">
+                            <li>Chargeback setelah transaksi</li>
+                            <li>Melakukan aktivitas ilegal</li>
+                            <li>Memperjualbelikan kembali tanpa izin</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimoni Pembeli</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Berikut adalah pengalaman nyata dari pembeli yang telah bertransaksi di MANG YAANZ STORE.</p>
+            
+            <div class="testimonial-grid" id="testimonialGrid">
+                <!-- Testimonial cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Hubungi Admin</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>MANG YAANZ STORE Siap Melayani Anda</h3>
+                    <p>Kami beroperasi setiap hari dengan jam layanan yang panjang. Fast response untuk memastikan Anda mendapatkan informasi yang dibutuhkan dengan cepat.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+62 812-3456-7890 (Fast Response)</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div>
+                                <h4>Telegram</h4>
+                                <p>@mangyaanz_store</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Jam Operasional</h4>
+                                <p>Setiap Hari: 09.00 - 23.00 WIB</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background-color: var(--primary); padding: 1.5rem; border-radius: var(--radius); margin-top: 2rem;">
+                        <h4><i class="fas fa-exclamation-circle" style="color: var(--warning); margin-right: 0.5rem;"></i> Penting!</h4>
+                        <p style="margin-top: 0.5rem;">Hanya gunakan kontak resmi di atas untuk menghindari penipuan. Admin tidak pernah meminta transfer ke rekening pribadi.</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Form Pemesanan Cepat</h3>
+                    <p>Isi form berikut untuk informasi lebih cepat (tidak untuk transfer). Admin akan membalas via WhatsApp/Telegram.</p>
+                    
+                    <form id="quickOrderForm">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" class="form-control" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact">WhatsApp/Telegram</label>
+                            <input type="text" id="contact" class="form-control" placeholder="Contoh: +6281234567890" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Akun yang Diminati</label>
+                            <select id="product" class="form-control" required>
+                                <option value="">Pilih akun</option>
+                                <option value="Valorant Account">Valorant Account</option>
+                                <option value="Netflix Premium">Netflix Premium</option>
+                                <option value="Instagram Account">Instagram Account</option>
+                                <option value="YouTube Premium">YouTube Premium</option>
+                                <option value="Mobile Legends Account">Mobile Legends Account</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Pertanyaan/Keterangan</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Tulis pertanyaan atau keterangan tambahan"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesanan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">MANG YAANZ STORE</div>
+                    <p class="footer-about">Tempat jual beli akun digital terpercaya dengan sistem keamanan terjamin. Transaksi aman, cepat, dan terpercaya sejak 2019.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Link Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#security">Sistem Keamanan</a></li>
+                        <li><a href="#testimonials">Testimoni</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-heading">Kebijakan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Kebijakan Pengembalian</a></li>
+                        <li><a href="#">Cara Bertransaksi</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 MANG YAANZ STORE. All rights reserved. | Designed with <i class="fas fa-heart" style="color: #ef4444;"></i> for JB Community
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281234567890?text=Halo%20MANG%20YAANZ%20STORE,%20saya%20tertarik%20dengan%20akun%20yang%20dijual" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Data produk
+        const products = [
+            {
+                id: 1,
+                title: "Valorant Account",
+                category: "game",
+                price: "Rp 350.000",
+                status: "ready",
+                description: "Account Valorant dengan skin premium dan rank Platinum. Email dan password bisa diganti.",
+                icon: "fas fa-crosshairs"
+            },
+            {
+                id: 2,
+                title: "Netflix Premium",
+                category: "streaming",
+                price: "Rp 120.000",
+                status: "ready",
+                description: "Akun Netflix Premium 4K UHD dengan garansi 30 hari. Bisa 4 screen simultan.",
+                icon: "fas fa-film"
+            },
+            {
+                id: 3,
+                title: "Instagram Account",
+                category: "sosmed",
+                price: "Rp 250.000",
+                status: "ready",
+                description: "Akun Instagram dengan follower 10K real, engagement tinggi. Aman dan terverifikasi email.",
+                icon: "fab fa-instagram"
+            },
+            {
+                id: 4,
+                title: "YouTube Premium",
+                category: "streaming",
+                price: "Rp 100.000",
+                status: "sold",
+                description: "YouTube Premium Family, bebas iklan, bisa download video. Garansi 3 bulan.",
+                icon: "fab fa-youtube"
+            },
+            {
+                id: 5,
+                title: "Mobile Legends Account",
+                category: "game",
+                price: "Rp 500.000",
+                status: "ready",
+                description: "Akun Mobile Legends mythic dengan 100+ skin legend dan hero lengkap.",
+                icon: "fas fa-gamepad"
+            },
+            {
+                id: 6,
+                title: "Spotify Premium",
+                category: "streaming",
+                price: "Rp 75.000",
+                status: "ready",
+                description: "Spotify Premium Family, bisa 6 user. Garansi 60 hari replacement jika ada masalah.",
+                icon: "fab fa-spotify"
+            },
+            {
+                id: 7,
+                title: "Twitter Verified",
+                category: "sosmed",
+                price: "Rp 400.000",
+                status: "sold",
+                description: "Akun Twitter dengan centang biru verifikasi. Username menarik, follower real.",
+                icon: "fab fa-twitter"
+            },
+            {
+                id: 8,
+                title: "Steam Wallet",
+                category: "game",
+                price: "Rp 200.000",
+                status: "ready",
+                description: "Steam Wallet $20, bisa untuk top up game atau beli item di Steam Market.",
+                icon: "fab fa-steam"
+            }
+        ];
+
+        // Data testimonial
+        const testimonials = [
+            {
+                name: "Rizky Pratama",
+                text: "Transaksi cepat dan aman! Akun Valorant yang saya beli sesuai deskripsi. Admin ramah dan fast response. Recommended banget!",
+                rating: 5,
+                date: "12 September 2023"
+            },
+            {
+                name: "Sari Dewi",
+                text: "Pertama kali beli akun Netflix di sini, awalnya ragu tapi ternyata benar-benar aman. Garansinya juga jelas. Sekarang langganan rutin tiap bulan.",
+                rating: 5,
+                date: "5 Oktober 2023"
+            },
+            {
+                name: "Fahmi Irawan",
+                text: "Beli akun Mobile Legends mythic, prosesnya cuma 10 menit setelah transfer. Skin dan hero lengkap banget. Puas sama pelayanannya!",
+                rating: 5,
+                date: "28 Oktober 2023"
+            }
+        ];
+
+        // DOM Elements
+        const productGrid = document.getElementById('productGrid');
+        const testimonialGrid = document.getElementById('testimonialGrid');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const burgerMenu = document.getElementById('burgerMenu');
+        const navMenu = document.getElementById('navMenu');
+        const quickOrderForm = document.getElementById('quickOrderForm');
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProducts('all');
+            renderTestimonials();
+            setupEventListeners();
+        });
+
+        // Render products based on filter
+        function renderProducts(filter) {
+            productGrid.innerHTML = '';
+            
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(product => product.category === filter);
+            
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-category', product.category);
+                
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        <i class="${product.icon}"></i>
+                        <div class="product-badge ${product.status}">${product.status === 'ready' ? 'READY' : 'SOLD'}</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category.toUpperCase()}</div>
+                        <h3 class="product-title">${product.title}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">${product.price}</div>
+                        <button class="btn ${product.status === 'ready' ? 'btn-primary' : 'btn-secondary'}" 
+                                onclick="orderProduct(${product.id})" 
+                                ${product.status === 'sold' ? 'disabled' : ''}>
+                            ${product.status === 'ready' ? 'Order Sekarang' : 'Sold Out'}
+                        </button>
+                    </div>
+                `;
+                
+                productGrid.appendChild(productCard);
+            });
+        }
+
+        // Render testimonials
+        function renderTestimonials() {
+            testimonialGrid.innerHTML = '';
+            
+            testimonials.forEach(testimonial => {
+                const testimonialCard = document.createElement('div');
+                testimonialCard.className = 'testimonial-card';
+                
+                let stars = '';
+                for (let i = 0; i < testimonial.rating; i++) {
+                    stars += '<i class="fas fa-star"></i>';
+                }
+                
+                testimonialCard.innerHTML = `
+                    <div class="testimonial-text">"${testimonial.text}"</div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">${testimonial.name.charAt(0)}</div>
+                        <div>
+                            <h4>${testimonial.name}</h4>
+                            <div class="rating">${stars}</div>
+                            <small>${testimonial.date}</small>
+                        </div>
+                    </div>
+                `;
+                
+                testimonialGrid.appendChild(testimonialCard);
+            });
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            // Filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    // Render products with selected filter
+                    renderProducts(this.getAttribute('data-filter'));
+                });
+            });
+            
+            // Burger menu
+            burgerMenu.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+                burgerMenu.innerHTML = navMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+            
+            // Close menu when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                    burgerMenu.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+            
+            // Form submission
+            quickOrderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const contact = document.getElementById('contact').value;
+                const product = document.getElementById('product').value;
+                const message = document.getElementById('message').value;
+                
+                // Basic validation
+                if (!name || !contact || !product) {
+                    alert('Harap isi semua field yang wajib diisi!');
+                    return;
+                }
+                
+                // Simulate form submission
+                alert(`Terima kasih ${name}! Pesanan untuk ${product} telah dikirim. Admin akan menghubungi Anda di ${contact} dalam 1-5 menit.`);
+                
+                // Reset form
+                quickOrderForm.reset();
+            });
+        }
+
+        // Order product function
+        function orderProduct(productId) {
+            const product = products.find(p => p.id === productId);
+            
+            if (product && product.status === 'ready') {
+                const whatsappUrl = `https://wa.me/6281234567890?text=Halo%20MANG%20YAANZ%20STORE,%20saya%20mau%20order%20${encodeURIComponent(product.title)}%20dengan%20harga%20${encodeURIComponent(product.price)}`;
+                window.open(whatsappUrl, '_blank');
+            } else {
+                alert('Maaf, produk ini sedang tidak tersedia.');
+            }
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
