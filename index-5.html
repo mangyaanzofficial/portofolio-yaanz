@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAHMII SHOP</title>
+<meta name="description" content="FAHMII SHOP - Marketplace modern dan terpercaya.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#08090d;--card:#11131a;--card2:#171923;--text:#f7f7fb;--muted:#9da2b3;--accent:#7c5cff;--accent2:#00d9ff;--line:#252938}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 80% 10%,#21164d 0,transparent 28%),var(--bg);color:var(--text);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(8,9,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.navbar{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:900;letter-spacing:1px}.logo span{color:var(--accent2)}
+.navlinks{display:flex;gap:25px;color:#c9ccda;font-size:14px}
+.navlinks a:hover{color:white}
+.menu{display:none;background:none;border:0;color:white;font-size:25px}
+.hero{padding:85px 0 65px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:280px;height:280px;background:#704cff;filter:blur(100px);opacity:.22;left:-100px;top:20px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.badge{display:inline-block;padding:7px 13px;border:1px solid #3c326c;background:#17122c;border-radius:30px;color:#c9bcff;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(42px,7vw,78px);line-height:.98;letter-spacing:-3px}
+.gradient{background:linear-gradient(90deg,#fff,#9c8aff,#00d9ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:580px;margin:22px 0;font-size:17px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 19px;border-radius:12px;font-weight:700;border:1px solid var(--line);display:inline-block}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#4b9cff);border:0}
+.btn-secondary{background:#12141c}
+.btn:hover{transform:translateY(-2px)}
+.showcase{background:linear-gradient(145deg,#171526,#0d1017);border:1px solid #302b4d;border-radius:25px;padding:22px;box-shadow:0 25px 80px rgba(0,0,0,.35)}
+.mock-top{display:flex;justify-content:space-between;color:#858a9d;font-size:12px;margin-bottom:18px}
+.mock-title{font-size:27px;font-weight:800;margin-bottom:14px}
+.mock-item{display:flex;align-items:center;gap:13px;background:#11131b;border:1px solid var(--line);padding:13px;border-radius:14px;margin-top:10px}
+.icon{width:43px;height:43px;border-radius:11px;background:linear-gradient(135deg,#7c5cff,#00d9ff);display:grid;place-items:center;font-size:20px}
+.price{margin-left:auto;font-weight:800}
+section{padding:70px 0}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}
+.section-head h2{font-size:32px}.section-head p{color:var(--muted)}
+.categories{display:flex;gap:10px;flex-wrap:wrap}
+.filter{padding:10px 15px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:#c7cad6;cursor:pointer}
+.filter.active,.filter:hover{background:#21194a;border-color:#5c49aa;color:white}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.product{background:linear-gradient(145deg,var(--card2),#0e1016);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.25s}
+.product:hover{transform:translateY(-5px);border-color:#4b3c88}
+.product-img{height:145px;display:grid;place-items:center;font-size:48px;background:radial-gradient(circle,#30235f,#12141b 65%)}
+.product-body{padding:17px}.product-body h3{font-size:17px}.product-body p{color:var(--muted);font-size:13px;margin:5px 0 13px}
+.product-foot{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.product-price{font-weight:900}.order{padding:8px 11px;border-radius:9px;background:var(--accent);font-size:12px;font-weight:700}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.feature{padding:24px;background:var(--card);border:1px solid var(--line);border-radius:17px}.feature b{display:block;margin:10px 0 5px}.feature p{color:var(--muted);font-size:14px}
+.contact{background:linear-gradient(135deg,#17122c,#101b25);border:1px solid #302b4d;border-radius:24px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.contact h2{font-size:30px}.contact p{color:var(--muted);margin-top:6px}
+footer{border-top:1px solid var(--line);padding:30px 0;color:#858a9d;font-size:13px}
+.footer-flex{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.toast{position:fixed;right:20px;bottom:20px;background:#171923;border:1px solid #343849;padding:13px 17px;border-radius:12px;display:none;z-index:50}
+@media(max-width:850px){.hero-grid{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr}.navlinks{display:none}.menu{display:block}.contact{flex-direction:column;align-items:flex-start}}
+@media(max-width:500px){.hero{padding-top:55px}.products{grid-template-columns:1fr}.section-head{display:block}.section-head p{margin-top:5px}h1{letter-spacing:-2px}.showcase{padding:17px}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navbar">
+    <a href="#" class="logo">FAHMII<span>SHOP</span></a>
+    <div class="navlinks">
+      <a href="#home">Home</a><a href="#produk">Produk</a><a href="#keunggulan">Keunggulan</a><a href="#kontak">Kontak</a>
+    </div>
+    <button class="menu" onclick="toggleMenu()">☰</button>
+  </div>
+</nav>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">✦ TOKO ONLINE FAHMII SHOP</span>
+      <h1>Belanja <span class="gradient">Mudah.</span><br>Order <span class="gradient">Cepat.</span></h1>
+      <p>Selamat datang di FAHMII SHOP. Temukan berbagai produk digital dan kebutuhan pilihan dengan proses order yang cepat dan praktis.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#produk">Lihat Produk →</a>
+        <a class="btn btn-secondary" href="https://wa.me/6285315663266" target="_blank">Chat WhatsApp</a>
+      </div>
+    </div>
+    <div class="showcase">
+      <div class="mock-top"><span>FAHMII SHOP</span><span>ONLINE ●</span></div>
+      <div class="mock-title">Produk Pilihan</div>
+      <div class="mock-item"><div class="icon">⚡</div><div><b>Panel Hosting</b><small style="display:block;color:#858a9d">Cepat & praktis</small></div><span class="price">Rp10K</span></div>
+      <div class="mock-item"><div class="icon">🛒</div><div><b>Produk Digital</b><small style="display:block;color:#858a9d">Proses otomatis</small></div><span class="price">Rp5K</span></div>
+      <div class="mock-item"><div class="icon">💎</div><div><b>Premium</b><small style="display:block;color:#858a9d">Pilihan terbaik</small></div><span class="price">Rp15K</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="produk">
+<div class="container">
+  <div class="section-head">
+    <div><h2>Produk Kami</h2><p>Pilih produk yang kamu butuhkan.</p></div>
+  </div>
+  <div class="categories">
+    <button class="filter active" onclick="filterProducts('all',this)">Semua</button>
+    <button class="filter" onclick="filterProducts('hosting',this)">Hosting</button>
+    <button class="filter" onclick="filterProducts('digital',this)">Digital</button>
+    <button class="filter" onclick="filterProducts('premium',this)">Premium</button>
+  </div>
+  <br>
+  <div class="products">
+    <article class="product" data-cat="hosting"><div class="product-img">⚡</div><div class="product-body"><h3>Panel Hosting</h3><p>Hosting cepat dan praktis.</p><div class="product-foot"><span class="product-price">Rp10.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Panel%20Hosting." target="_blank">Order</a></div></div></article>
+    <article class="product" data-cat="hosting"><div class="product-img">☁️</div><div class="product-body"><h3>Server Digital</h3><p>Layanan server sesuai kebutuhan.</p><div class="product-foot"><span class="product-price">Rp15.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Server%20Digital." target="_blank">Order</a></div></div></article>
+    <article class="product" data-cat="digital"><div class="product-img">📱</div><div class="product-body"><h3>Nokos WhatsApp</h3><p>Nomor kosong siap pakai untuk WhatsApp.</p><div class="product-foot"><span class="product-price">Rp4.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Nokos%20WhatsApp." target="_blank">Order</a></div></div></article>
+    <article class="product" data-cat="digital"><div class="product-img">🤖</div><div class="product-body"><h3>Script Bug Via Telegram</h3><p>Script bug kirim otomatis via Telegram.</p><div class="product-foot"><span class="product-price">Rp10.000 - Rp35.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Script%20Bug%20Via%20Telegram." target="_blank">Order</a></div></div></article>
+    <article class="product" data-cat="digital"><div class="product-img">📲</div><div class="product-body"><h3>Apk Bug</h3><p>Aplikasi bug siap pakai.</p><div class="product-foot"><span class="product-price">Rp8.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Apk%20Bug." target="_blank">Order</a></div></div></article>
+    <article class="product" data-cat="digital"><div class="product-img">✈️</div><div class="product-body"><h3>Nokos Telegram</h3><p>Nomor kosong siap pakai untuk Telegram.</p><div class="product-foot"><span class="product-price">Rp10.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Nokos%20Telegram." target="_blank">Order</a></div></div></article>
+    <article class="product" data-cat="premium"><div class="product-img">💎</div><div class="product-body"><h3>Akun Premium</h3><p>Pilihan premium dengan harga hemat.</p><div class="product-foot"><span class="product-price">Rp15.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Akun%20Premium." target="_blank">Order</a></div></div></article>
+    <article class="product" data-cat="hosting"><div class="product-img">🖥️</div><div class="product-body"><h3>Reseller Panel</h3><p>Panel reseller untuk jualan hosting sendiri.</p><div class="product-foot"><span class="product-price">Rp5.000</span><a class="order" href="https://wa.me/6285315663266?text=Halo%20FAHMII%20SHOP,%20saya%20ingin%20order%20Reseller%20Panel." target="_blank">Order</a></div></div></article>
+  </div>
+</div>
+</section>
+
+<section id="keunggulan">
+<div class="container">
+  <div class="section-head"><div><h2>Kenapa FAHMII SHOP?</h2><p>Pengalaman belanja yang simpel.</p></div></div>
+  <div class="features">
+    <div class="feature"><div class="icon">⚡</div><b>Proses Cepat</b><p>Order diproses dengan cepat setelah pembayaran dikonfirmasi.</p></div>
+    <div class="feature"><div class="icon">🔒</div><b>Aman & Terpercaya</b><p>Kami mengutamakan keamanan dan kenyamanan pelanggan.</p></div>
+    <div class="feature"><div class="icon">💬</div><b>Support</b><p>Butuh bantuan? Hubungi kami melalui WhatsApp kapan saja.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="kontak">
+<div class="container">
+  <div class="contact">
+    <div><h2>Siap untuk order?</h2><p>Hubungi FAHMII SHOP sekarang melalui WhatsApp.</p></div>
+    <a class="btn btn-primary" href="https://wa.me/6285315663266" target="_blank">Chat WhatsApp ↗</a>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-flex">
+  <div>© 2026 <b>FAHMII SHOP</b>. All rights reserved.</div>
+  <div>WA: 6285315663266 · TLE: fahmiihandsome · IG: fhmii_nichol</div>
+</div>
+</footer>
+<div class="toast" id="toast">Menu navigasi dibuka</div>
+
+<script>
+function filterProducts(cat,btn){
+  document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.product').forEach(p=>{
+    p.style.display=(cat==='all'||p.dataset.cat===cat)?'block':'none';
+  });
+}
+function toggleMenu(){
+  const nav=document.querySelector('.navlinks');
+  nav.style.display=nav.style.display==='flex'?'none':'flex';
+  if(nav.style.display==='flex'){
+    nav.style.position='absolute';nav.style.top='72px';nav.style.left='0';nav.style.right='0';
+    nav.style.background='#0b0c11';nav.style.padding='18px 5%';nav.style.flexDirection='column';nav.style.borderBottom='1px solid #252938';
+  }
+}
+</script>
+</body>
+</html>
