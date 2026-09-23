@@ -33,9 +33,9 @@ export type Service = {
 
 export const SITE_CONFIG = {
   /* ---------------------------------------------------------------- IDENTITY */
-  name: "Reza Pratama", // TODO: ganti nama kamu
-  firstName: "Reza",
-  username: "@santanic", // TODO: username / handle
+  name: "Yaanz Official", // TODO: ganti nama kamu
+  firstName: "Yaanz",
+  username: "@YaanzNotDev", // TODO: username / handle
   role: "Developer • Digital Creator • Entrepreneur",
   roleList: ["Developer", "Digital Creator", "Entrepreneur"],
   location: "Indonesia",
@@ -62,11 +62,11 @@ export const SITE_CONFIG = {
   ],
 
   /* --------------------------------------------------------------- SOCIALS */
-  email: "hello@santanic.dev", // TODO
-  telegram: "https://t.me/santanic", // TODO
-  whatsapp: "https://wa.me/6281234567890", // TODO
-  github: "https://github.com/santanic", // TODO
-  instagram: "https://instagram.com/santanic", // TODO
+  email: "officialsantanic@gmail.com", // TODO
+  telegram: "https://t.me/YaanzNotDev", // TODO
+  whatsapp: "https://wa.me/6285718072088", // TODO
+  github: "https://github.com/mangyaanzofficial", // TODO
+  instagram: "https://instagram.com/yaanztesti_", // TODO
 
   /* ----------------------------------------------------------------- STATS */
   stats: [
@@ -279,7 +279,7 @@ export const socialLinks = [
   },
   {
     label: "WhatsApp",
-    handle: "+62 812-3456-7890", // TODO: samakan dengan nomor WhatsApp
+    handle: "+62 857-1807-2088", // TODO: samakan dengan nomor WhatsApp
     href: SITE_CONFIG.whatsapp,
     icon: "whatsapp" as const,
   },
